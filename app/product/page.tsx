@@ -26,7 +26,7 @@ function ProductPage() {
       "https://images.pexels.com/photos/1043503/pexels-photo-1043503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       // Add more URLs as needed
     ],
-    price: "$10.99",
+    price: 10.99,
     title: "Sample Product",
     rating: "4.5",
     seller: "Sample Seller",

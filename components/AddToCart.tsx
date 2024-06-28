@@ -5,6 +5,7 @@ import { Organic } from '@/typings/searchTypings'
 import { stat } from 'fs'
 import React from 'react'
 import { Button } from './ui/button'
+import RemoveFromCart from './RemoveFromCart'
 
 function AddToCart({product}: {product: Organic}) {
     const [cart, addToCart] = useCartStore((state) => [
@@ -28,6 +29,7 @@ function AddToCart({product}: {product: Organic}) {
     if(howManyInCart > 0) {
         return(
         <div className='flex space-x-5 items-center'>
+            <RemoveFromCart product={product} />
             <p>-</p>
             <span>{howManyInCart}</span>
             <Button className='bg-walmart hover:bg-walmart/50' onClick={handleAdd}>
@@ -44,7 +46,7 @@ function AddToCart({product}: {product: Organic}) {
 
 
   return (
-    <Button onClick={handleAdd}>Add To Cart</Button>
+    <Button className='bg-walmart hover:bg-walmart/50' onClick={handleAdd}>Add To Cart</Button>
   )
 }
 
