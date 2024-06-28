@@ -4,6 +4,7 @@ import { useCartStore } from '@/store'
 import { Organic } from '@/typings/searchTypings'
 import { stat } from 'fs'
 import React from 'react'
+import { Button } from './ui/button'
 
 function AddToCart({product}: {product: Organic}) {
     const [cart, addToCart] = useCartStore((state) => [
@@ -19,17 +20,31 @@ function AddToCart({product}: {product: Organic}) {
 
     console.log("How many in cart", howManyInCart);
 
+    const handleAdd = () => {
+        console.log("Adding to cart", product);
+        addToCart(product);
+    }
+
     if(howManyInCart > 0) {
+        return(
+        <div className='flex space-x-5 items-center'>
+            <p>-</p>
+            <span>{howManyInCart}</span>
+            <Button className='bg-walmart hover:bg-walmart/50' onClick={handleAdd}>
+            +</Button>
+        </div>
 
-
+        )
         
+
+
 
     }
 
 
 
   return (
-    <div>AddToCart</div>
+    <Button onClick={handleAdd}>Add To Cart</Button>
   )
 }
 
