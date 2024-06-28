@@ -6,7 +6,7 @@ export interface Specification {
 export interface Organic {
   url: string;
   images: string[];
-  price: string;
+  price: number;
   title: string;
   rating: string;
   seller: string;

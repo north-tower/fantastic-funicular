@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import { FormEvent } from "react"
 import {useRouter } from "next/navigation"
+import { getCartTotal } from '@/lib/getCartTotal';
+import { useCartStore } from '@/store';
 
 function Header() {
   const router = useRouter();
@@ -20,8 +22,9 @@ function Header() {
     e.preventDefault();
     const input = e.currentTarget.input.value;
     router.push(`/search?q=${input}`)
-
   }
+  const cart = useCartStore((state) => state.cart)
+  const total = getCartTotal(cart)
   return (
     <header className="flex flex-col md:flex-row items-center bg-walmart px-10 py-7 space-x-5">
       <Link href="/" className="">
@@ -81,7 +84,7 @@ function Header() {
             <ShoppingCart size={20} />
             <div>
               <p className="text-xs font-extralight">No Items</p>
-              <p>$0.00</p>
+              <p>KES{total}</p>
               </div>
               </Link>
         
