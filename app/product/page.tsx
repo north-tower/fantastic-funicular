@@ -39,6 +39,7 @@ function ProductPage() {
       { key: "Size", value: "3 inch" },
       // Add more specifications as needed
     ],
+    meta: "100"
   };
 
   return (
