@@ -83,7 +83,8 @@ function Header() {
           className="flex text-white font-bold items-center space-x-2 text-sm">
             <ShoppingCart size={20} />
             <div>
-              <p className="text-xs font-extralight">No Items</p>
+              <p className="text-xs font-extralight">{cart.length > 0 ? 
+              `${cart.length} items`: "No items"}</p>
               <p>KES{total}</p>
               </div>
               </Link>
