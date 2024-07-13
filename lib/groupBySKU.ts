@@ -10,4 +10,6 @@ export function groupBySKU(products: Organic[]): Record<string, Organic[]>{
             }
             accumulator[sku].push(currentProduct);
             return accumulator;
-        }
+        }, {}
+    )
+}

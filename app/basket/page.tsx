@@ -1,3 +1,4 @@
+import Basket from '@/components/Basket'
 import { ShoppingCartIcon } from 'lucide-react'
 import React from 'react'
 

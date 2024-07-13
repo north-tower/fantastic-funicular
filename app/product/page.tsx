@@ -39,7 +39,7 @@ function ProductPage() {
       { key: "Size", value: "3 inch" },
       // Add more specifications as needed
     ],
-    meta: "100"
+    meta: 100
   };
 
   return (
@@ -99,9 +99,9 @@ function ProductPage() {
           className="py-5"
         />
 
-        <p className="text-yellow-500 text-sm">{product.rating} *</p>
+        <p className="text-yellow-500 text-sm">{product.rating} *
         <span className="text-gray-400 ml-2">reviews</span>
-
+          </p>
         <p className="text-2xl font-bold mt2">KES{product.price}</p>
 
         <AddToCart product={product} />

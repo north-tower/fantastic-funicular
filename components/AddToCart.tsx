@@ -32,7 +32,8 @@ function AddToCart({product}: {product: Organic}) {
             <RemoveFromCart product={product} />
             <p>-</p>
             <span>{howManyInCart}</span>
-            <Button className='bg-walmart hover:bg-walmart/50' onClick={handleAdd}>
+            <Button className='bg-walmart hover:bg-walmart/50'
+             onClick={handleAdd}>
             +</Button>
         </div>
 
@@ -46,7 +47,8 @@ function AddToCart({product}: {product: Organic}) {
 
 
   return (
-    <Button className='bg-walmart hover:bg-walmart/50' onClick={handleAdd}>Add To Cart</Button>
+    <Button className='bg-walmart hover:bg-walmart/50' 
+    onClick={handleAdd}>Add To Cart</Button>
   )
 }
 
