@@ -5,5 +5,8 @@ export function getCartTotal(products: Organic[]): string {
         (acc: number, currentProduct: Organic) => acc + currentProduct.price,0
     )
 
-    return ` ${total.toFixed(2)}`
+    return ` ${
+        
+        
+        total.toFixed(2)}`
 }
