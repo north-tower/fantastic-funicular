@@ -15,5 +15,5 @@ export interface Organic {
   breadcrumbs: string[];
   description: string;
   specifications: Specification[];
-  meta: number
+  meta: string
 }

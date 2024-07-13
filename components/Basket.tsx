@@ -3,6 +3,7 @@
 import { getCartTotal } from "@/lib/getCartTotal"
 import { groupBySKU } from "@/lib/groupBySKU"
 import { useCartStore } from "@/store"
+import Image from "next/image";
 
 
 function Basket() {
@@ -10,10 +11,27 @@ function Basket() {
     const grouped = groupBySKU(cart);
     const basketTotal = getCartTotal(cart);
 
-  
-    console.log(grouped)
   return (
-    <div>Basket</div>
+    <div className="max-w-7xl mx-auto">
+        <ul className="space-y-5 divide-y-2">
+            {Object.keys(grouped).map((sku => {
+                const item = grouped[sku][0]
+                const total = getCartTotal(grouped[sku]);
+
+                return(
+                    <li key={sku} className="p-5 my-2 flex items-center justify-between">
+                        {item.images[0] && (
+                            <Image src={item.images[0]}
+                                alt={item.title}
+                                width={100}
+                                height={100}
+                                />
+                        )}
+                    </li>
+                );
+            }))}
+        </ul>
+    </div>
   )
 }
 
