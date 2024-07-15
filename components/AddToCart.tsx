@@ -30,7 +30,7 @@ function AddToCart({product}: {product: Organic}) {
         return(
         <div className='flex space-x-5 items-center'>
             <RemoveFromCart product={product} />
-            <p>-</p>
+            {/* <p>-</p> */}
             <span>{howManyInCart}</span>
             <Button className='bg-walmart hover:bg-walmart/50'
              onClick={handleAdd}>

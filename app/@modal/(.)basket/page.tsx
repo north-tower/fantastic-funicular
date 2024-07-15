@@ -1,5 +1,6 @@
 'use client'
 
+import Basket from "@/components/Basket";
 import {
     Dialog,
     DialogContent,
@@ -25,15 +26,16 @@ function BasketInterception() {
     }}
     
     >
-  <DialogTrigger>Open</DialogTrigger>
-  <DialogContent>
+ 
+  <DialogContent className="h-4/5 w-full overflow-scroll max-w-3xl">
     <DialogHeader>
-      <DialogTitle>Are you absolutely sure?</DialogTitle>
+      <DialogTitle>Basket</DialogTitle>
       <DialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
+        <p>Contents of your basket</p>
       </DialogDescription>
     </DialogHeader>
+    
+    <Basket />
   </DialogContent>
 </Dialog>
 
